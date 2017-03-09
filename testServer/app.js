@@ -10,6 +10,28 @@ var users = require('./routes/users');
 
 var app = express();
 
+
+var mysql      = require('mysql');
+var connection = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : 'dani44',
+  database : 'testdb'
+});
+
+console.log('conneting'); 
+connection.connect();
+ 
+ console.log('connected');
+connection.query('SELECT 1 + 1 AS solution', function (error, results, fields) {
+  if (error) throw error;
+  console.log('The solution is: ', results[0].solution);
+});
+ 
+connection.end();
+
+console.log('after');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');

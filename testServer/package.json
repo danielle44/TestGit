@@ -11,8 +11,10 @@
     "debug": "~2.6.0",
     "express": "~4.14.1",
     "jade": "~1.11.0",
+    "knex": "^0.12.7",
     "less-middleware": "~2.2.0",
     "morgan": "~1.7.0",
+    "mysql": "^2.13.0",
     "serve-favicon": "~2.3.2"
   }
 }
